@@ -1,0 +1,694 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+ /* Start Header CSS */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+header img{
+    margin-left: 1rem;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    color:white;
+}
+ /* End Header CSS */
+
+
+
+ /* Start Navigation CSS in header */
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: rgb(247, 238, 220);
+    text-shadow:1px 1px 1px #000000;
+    text-decoration: none;
+    font-weight: 400;
+    margin: 20px 20px;
+}
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2.4px;
+    background: #fff;
+    border-radius: 3px;
+    transform: scaleX(0);
+    transition: transform .5s;
+    transform-origin: right;
+}
+.navigation a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.bgColor{
+    transition: all 1s;
+    background-color:#162938;
+}
+ /* End Navigation CSS in header */
+
+
+ /* start Pages heading CSS*/
+.heading {
+    position: relative;
+    font-size:2.5rem;
+    color: rgb(32, 32, 32);
+    font-weight: 400;
+    text-align: center;
+    align-items: center;
+    font-family:Lucida Calligraphy;
+    padding: 2rem;
+}
+.heading i {
+    position: absolute;
+    margin:-7px 0 0 -70px;
+    font-size: 4rem;
+    border-radius: 200px;
+    overflow: hidden;
+}
+ /*End Pages heading CSS*/
+
+
+ /* Start home page Css */
+.hero {
+    position: relative;
+    background-image: url('image/360_F_455501849_lQxaVzf6FsxtfMEFvWHrYfJRQ1AfthOn.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    padding: 490px 0 150px 0;
+}
+.hero img{
+    position: absolute;
+    margin: -21% 2% 0 82%;
+    width: 9rem;
+    height: auto;
+}
+.hero p {
+    position: relative;
+    margin: 0 3% 0 36%;
+    flex: 1 1 45rem;
+    font-size: 37px;
+    font-weight:600;
+    color: rgb(255, 145, 0);
+    text-shadow: 1px 1px 1px #000000;
+    font-family:Lucida Calligraphy;
+    text-transform: capitalize;
+}
+.hero p span{
+    color:rgb(0, 179, 0);
+    text-shadow: 1px 1px 1px #000000;
+    font-family:Lucida Calligraphy;
+    text-transform: capitalize;
+    font-size: 37px;
+    font-weight:600;
+}
+ /* End home page CSS */
+
+
+ /* Start About Section CSS */
+.about {
+    background: rgb(194, 221, 230);
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 5rem;
+    margin-top: -7rem;
+    margin-bottom: -3rem;
+}
+.image {
+    text-align: center;
+    flex: 1 1 35rem;
+}
+.image img {
+    margin: 4rem;
+    width: 22rem;
+    height: auto;
+    border-radius: 4%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+.image img:hover {
+    transform: scale(1.02);
+}
+.content {
+    flex: 1 1 45rem;
+    padding: 4rem 5rem 4rem 0rem;
+}
+.content h3 {
+    color: rgb(27, 27, 27);
+    font-size: 1.8rem;
+}
+.tag {
+    font-size: 1rem;
+    color: #020133;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+.content p {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    font-weight: 400;
+    text-transform: none;
+    justify-content: justify;
+}
+ /* End About Section CSS */
+
+
+
+ /* Start Winners list section CSS */
+.winner-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.winner {
+    background-image: url('image/jake-weirick-_Bg8CodrHEU-unsplash.jpg');
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+.winner h2 {
+    margin-left: -13em;
+    padding:30px 0px 0px 0px;
+    color:white;
+}
+
+ /* Panels Of winners List section */
+.panel {
+    display: inline-block;
+    width:350px;
+    margin:30px 0px 20px 115px;
+    background-color: #003380;
+    box-shadow:2px 2px 10px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    transition:background-color 0.3s, transform 0.4s ;
+    cursor: pointer;
+}
+
+.panel-header {
+    background-color: #001f4d;
+    color: #fff;
+    border-radius: 15px;
+    padding: 20px 30px 20px 40px;
+    border-radius: 5px 5px 0 0;
+}
+
+.panel-header h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.panel-content {
+    padding: 20px 30px 20px 40px;
+}
+
+.panel-content p {
+    font-size: 15px;
+    color:#ff9999;
+}
+.panel:hover{
+    transform: scale(1.04);
+    background-color:#003d99;
+}
+ /* End Winners list section CSS */
+
+
+ /* Start Winners Pichers section CSS */
+.wrapper {
+    width: 100%;
+    margin: 20px 0 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    margin: 0 8px;
+    display: flex;
+    align-items: flex-end;
+    border: #000000 1px solid;
+    transition: .6s ;
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card  .row {
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: nowrap;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+
+.card  .row  .icon {
+    background: rgb(5, 5, 5);
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0  0 -65.5px;
+    opacity: 1;
+}
+
+.card  .row  .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p {
+    color: rgb(105, 153, 255);
+    padding-top: 5px;
+    font-weight: 300;
+    background-color: #000000;
+    padding: 2px 0 5px 10px;
+    border-bottom-left-radius: 8px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+    background-color: #000000;
+    padding: 5px 0 0 10px;
+    border-top-left-radius: 8px;
+}
+.wrapper input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+    background-image: url('image/2007.png');
+}
+.card[for="c2"] {
+    background-image: url('image/2009.png');
+}
+.card[for="c3"] {
+    background-image: url('image/2010.png');
+}
+.card[for="c4"] {
+    background-image: url('image/2012.png');
+}
+.card[for="c5"] {
+    background-image: url('image/2014.png');
+}
+.card[for="c6"] {
+    background-image: url('image/2016.png');
+}
+.card[for="c7"] {
+    background-image: url('image/2021.png');
+}
+.card[for="c8"] {
+    background-image: url('image/2022.png');
+}
+.card[for="c9"] {
+    background-image: url('image/2024.png');
+}
+ /* End Winners Pichers section CSS */
+
+
+
+ /* Start Feedback Section CSS */
+.contact {
+    background:#d3dff8;
+    min-height: 60vh;
+}
+.contact .container1 {
+    max-width: 1050px;
+    width: 100%;
+    background: #fff;
+    border-radius: 1.5rem;
+    margin: 2rem 15rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+.contact .container1 .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 2rem;
+}
+.contact .content .image-box {
+    max-width: 100%;
+    margin-left: 1.8rem;
+}
+.contact .content .image-box img {
+    width: 100%;
+    height: 25rem;
+    position: relative;
+}
+.contact .content form {
+    width: 45%;
+    margin-right: 3.5rem;
+}
+form .form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-group .field {
+    height: 50px;
+    display: flex;
+    position: relative;
+    margin: 1rem;
+    width: 100%;
+}
+form i {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+form .field input,
+form .message textarea {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 0 16px 0 48px;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5px;
+    border: 1px solid rgb(51, 51, 51);
+    background: #e5ecfb;
+}
+
+.field input:focus,
+.message textarea:focus {
+    padding-left: 47px;
+    border: 2px solid rgb(115, 3, 167);
+}
+form .message {
+    position: relative;
+    margin: 1rem;
+    width: 100%;
+}
+form .message i {
+    top: 25px;
+    font-size: 18px;
+    left: 15px;
+}
+form .message textarea {
+    min-height: 130px;
+    max-height: 230px;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 12px 20px 0 48px;
+}
+
+form .button-area {
+    display: flex;
+    margin-top:11px;
+    margin-right:-14px;
+    float: right;
+    flex-direction: row-reverse;
+}
+.button-area button {
+    color: #fff;
+    border: none;
+    outline: none;
+    align-items:middle;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 9px 20px;
+    background: #2506ad;
+    box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+    transition: 0.3s ease;
+    font-family: "Nunito", sans-serif;
+}
+.button-area button:hover {
+    background: #421cecf5;
+}
+ /* End Feedback Section CSS */
+
+
+
+ /* Start Footer section CSS  */
+.footer {
+    min-height: auto;
+    padding-top: 0;
+    background: rgb(0, 1, 43);
+}
+.footer .box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footer .box-container .box {
+    flex: 1 1 25rem;
+    margin: 2.5rem;
+}
+.footer .box-container .box h3 {
+    color: #fff;
+    padding-bottom: 1rem;
+    font-weight: bold;
+    font-size:1.2em;
+}
+.footer .box-container .box p {
+    color: #ccc;
+    padding: 0.7rem 0;
+    text-transform: none;
+}
+.footer .box-container .box p i {
+    padding-right: 1rem;
+    color: #ffae00;
+    font-size: 1.1rem;
+}
+.footer .box-container .box a {
+    color: rgb(238, 238, 238);
+    padding: 0.3rem 0;
+    display: block;
+    text-decoration: none;
+}
+.footer .box-container .box a:hover {
+    color: #ffae00;
+}
+  
+.footer .box-container .box .share {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem 0;
+}
+.footer .box-container .box .share a {
+    height: 0.7rem;
+    width: 0.7rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5rem;
+    margin-left: 1rem;
+    transition: 0.2s;
+    background: rgb(230, 230, 230);
+    color: #02094b;
+    border: none;
+}
+.footer .box-container .box .share a:hover {
+    background: transparent;
+    color: #ffae00;
+}
+.footer .credit {
+    padding: 1rem 1rem 1rem 1rem;
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-weight: 550;
+    color: #fff;
+    border-top: 0.1rem solid #fff3;
+}
+.footer .credit a {
+    color: #ffae00;
+}
+.social1{
+    border-radius:50%;
+    background-color:white;
+    hight:35px;
+    width:35px;
+    margin-left:-16.2px;
+    margin-top:-16.5px;
+}
+.social1:hover{
+    background-color:#0066ff;
+}
+ /* End Footer section CSS  */
+
+
+
+ /* Start CSS for some Animation */
+.reveal{
+    position: relative;
+    transform: translateY(-40px);
+    opacity: 0;
+    transition: all 1.2s ease;
+}
+.reveal.active{
+    position: relative;
+    transform: translateY(0);
+    opacity: 1;
+}
+ /* End CSS for some Animation */
+
+
+
+
+ /* Start CSS for Alert Box */
+.custom-alert {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(45px);
+    border: 2px solid rgba(32, 31, 31, 0.085);
+    padding: 100px 50px 60px 50px;
+    color: cornsilk;
+    font-weight: 500;
+    border-radius: 5px;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    animation: slideIn 0.5s ease-in-out forwards;
+}
+  
+@keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+}
+  
+.alert-content {
+    text-align: center;
+}
+  
+.close-btn {
+    position: absolute;
+    top: 7px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+} 
+
+.button-33 {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 14px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  margin-top: 25px;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-33:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+/* End CSS for Alert Box */
+
+
+
+
+
+
+/* CSS start for Pre-loader */
+  .loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .loader {
+    position: relative;
+    display: inline-block;
+    border: 4px solid black;
+    border-top: 4px solid lightgreen;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg);}
+  }
+/* CSS End for Pre-loader */
