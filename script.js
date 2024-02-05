@@ -106,30 +106,31 @@ function reveal(){
 
 
 // pre-loader js Start
-var scrollTopp;
+var scrollTop;
 
-function disableScrolll() {
-    scrollTopp = window.pageYOffset || document.documentElement.scrollTopp;
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollTopp}px`;
+function disableScroll() {
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollTop}px`;
 }
 
-function enableScrolll() {
-    document.body.style.position = '';
-    document.body.style.top = '';
-    window.scrollTo(0, scrollTopp);
+function enableScroll() {
+  document.body.style.position = '';
+  document.body.style.top = '';
+  if (typeof scrollTop !== 'undefined') {
+    window.scrollTo(0, scrollTop);
+  }
 }
 
 $(document).ready(function() {
-    // Disable scrolling while the preloader is active
-    disableScrolll();
+  disableScroll();
 });
 
 $(window).on("load", function() {
-    $(".loader-wrapper").fadeOut("slow", function() {
-        // Re-enable scrolling when the preloader is hidden
-        enableScrolll();
-    });
+  $(".loader-wrapper").fadeOut("slow", function() {
+    enableScroll();
+  });
 });
+
 
 // pre-loader js End
