@@ -120,3 +120,9 @@ function reveal(){
     }
 }
 // Add some animation js End
+
+// pre-loader js Start
+$(window).on("load",function(){
+  $(".loader-wrapper").fadeOut("slow");
+});
+// pre-loader js End
