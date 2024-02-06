@@ -122,7 +122,10 @@ function reveal(){
 // Add some animation js End
 
 // pre-loader js Start
-$(window).on("load",function(){
-  $(".loader-wrapper").fadeOut("slow");
+$(window).on("load", function(){
+    $(".loader-wrapper").fadeOut("slow", function() {
+      $("body").removeClass("disable-scroll");
+    });
+    $("body").addClass("disable-scroll");
 });
 // pre-loader js End
