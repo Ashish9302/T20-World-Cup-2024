@@ -93,7 +93,7 @@ header img{
     position: relative;
     background-image: url('image/360_F_455501849_lQxaVzf6FsxtfMEFvWHrYfJRQ1AfthOn.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: left;
     text-align: left;
     padding: 490px 0 150px 0;
 }
@@ -122,6 +122,9 @@ header img{
     font-size: 37px;
     font-weight:600;
 }
+.dark{
+    background-color: rgb(0, 0, 0, 0.6);
+}
  /* End home page CSS */
 
 
@@ -134,7 +137,7 @@ header img{
     flex-direction: row;
     gap: 2rem;
     flex-wrap: wrap;
-    padding: 5rem;
+    padding: 12% 8% 20% 8%;
     margin-top: -7rem;
     margin-bottom: -3rem;
 }
@@ -144,19 +147,20 @@ header img{
 }
 .image img {
     margin-top: 3.8rem;
-    width: 22rem;
+    width: 18rem;
     height: auto;
     border-radius: 4%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
     cursor: pointer;
     transition: transform 0.4s;
+    margin-left: -35px;
 }
 .image img:hover {
     transform: scale(1.02);
 }
 .content {
     flex: 1 1 45rem;
-    padding: 4rem 5rem 4rem 0rem;
+    padding: 5% 7% 5% 0rem;
 }
 .content h3 {
     color: rgb(27, 27, 27);
@@ -201,7 +205,7 @@ header img{
 .panel {
     display: inline-block;
     width:350px;
-    margin:35px 77px 35px 77px;
+    margin: 2.5% 4.9% 2.5% 4.9%;
     background-color: #003380;
     box-shadow:2px 2px 10px rgba(0, 0, 0, 1);
     border-radius: 10px;
@@ -365,14 +369,18 @@ input:checked + label .description {
 .contact {
     background:#d3dff8;
     min-height: 60vh;
+    align-items: center;
+    margin: 0 auto; 
+    text-align: center;
 }
 .contact .container1 {
     max-width: 1050px;
-    width: 100%;
+    width: 80%;
     background: #fff;
     border-radius: 1.5rem;
-    margin: 2rem 15rem;
+    margin: 5% 5%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    align-items: center;
 }
 .contact .container1 .content {
     display: flex;
@@ -383,6 +391,7 @@ input:checked + label .description {
 .contact .content .image-box {
     max-width: 100%;
     margin-left: 1.8rem;
+    display: none;
 }
 .contact .content .image-box img {
     width: 100%;
@@ -390,8 +399,9 @@ input:checked + label .description {
     position: relative;
 }
 .contact .content form {
-    width: 45%;
-    margin-right: 3.5rem;
+    width: 100%;
+    margin-right: 7%;
+    margin-left: -4%;
 }
 form .form-group {
     display: flex;
@@ -655,6 +665,11 @@ form .button-area {
 }
 /* End CSS for Alert Box */
 
+
+
+
+
+
 /* CSS start for Pre-loader */
 .loader-wrapper {
     position: fixed;
@@ -691,3 +706,28 @@ form .button-area {
     overflow: hidden !important;
   }
 /* CSS End for Pre-loader */
+
+@media screen and (min-width: 700px){
+    .contact{
+        align-items: center;
+    }
+    .contact .content .image-box {
+        display: flex;
+    }
+    .contact .container1 {
+        max-width: 1050px;
+        width: 100%;
+        margin: 2rem 15rem;
+    }
+    .contact .content form {
+        width: 45%;
+        margin-right: 3.5rem;
+    }
+    .row {
+        padding: 5rem;
+    }
+    .image img {
+        width: 22rem;
+        margin-left: -0px;
+    }
+}
