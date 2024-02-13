@@ -70,15 +70,16 @@ header img{
     text-decoration: none;
     text-align: center;
     font-size: 17px;
-    transition: transform 0.2s;
+    padding: 10px;
+    transition: transform 0.4s;
     font-weight: 400;
     text-shadow: 1px 1px 1px black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .menu-bar a:hover {
-    color: blue;
-    font-size: 18px;
+    color:lightblue;
+    transform: scale(1.05);
 }
  /* End Header CSS */
 
