@@ -129,3 +129,18 @@ $(window).on("load", function(){
     $("body").addClass("disable-scroll");
 });
 // pre-loader js End
+
+
+
+const toggle = document.querySelector('.toggle_btn');
+const taggleBtnIcon = document.querySelector('.toggle_btn i');
+const dropMenu = document.querySelector('.menu-bar');
+
+toggle.onclick = function () {
+    dropMenu.classList.toggle('open');
+    const isOpen = dropMenu.classList.contains('open');
+
+    taggleBtnIcon.className = isOpen ?
+        'bx bx-menu' :
+        'bx bx-x';
+};
