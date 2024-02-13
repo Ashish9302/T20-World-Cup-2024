@@ -72,12 +72,16 @@ document.addEventListener('contextmenu', function(e) {
 // Chnage nav background color js Start
 function changeBg(){
     var navbar = document.getElementById('nav-bar');
+    var menubar = document.getElementById('menu-bar');
+
     var scrollValue = window.scrollY;
     if(scrollValue < 250){
         navbar.classList.remove('bgColor');
+        menubar.classList.remove('bgColor');
     }
     else{
-        navbar.classList.add('bgColor')
+        navbar.classList.add('bgColor');
+        menubar.classList.add('bgColor');
     }
 }
 window.addEventListener('scroll', changeBg);
@@ -121,17 +125,19 @@ function reveal(){
 }
 // Add some animation js End
 
+
+
 // pre-loader js Start
 $(window).on("load", function(){
     $(".loader-wrapper").fadeOut("slow", function() {
       $("body").removeClass("disable-scroll");
     });
     $("body").addClass("disable-scroll");
-});
+  });
 // pre-loader js End
 
 
-
+// menu bar js start
 const toggle = document.querySelector('.toggle_btn');
 const taggleBtnIcon = document.querySelector('.toggle_btn i');
 const dropMenu = document.querySelector('.menu-bar');
@@ -141,6 +147,7 @@ toggle.onclick = function () {
     const isOpen = dropMenu.classList.contains('open');
 
     taggleBtnIcon.className = isOpen ?
-        'bx bx-menu' :
-        'bx bx-x';
+        'bx bx-x' :
+        'bx bx-menu';
 };
+// menu bar js End
