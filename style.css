@@ -8,7 +8,11 @@ html{
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-
+body{
+    overflow: hidden;
+    max-width: 100%;
+    font-size: 80%;
+}
  /* Start Header CSS */
 header{
     position: fixed;
@@ -23,11 +27,49 @@ header{
 }
 
 header img{
-    margin-left: 1rem;
-    height: 50px;
-    width: 50px;
+    margin-left: -1.3rem;
+    height: 40px;
+    width: 40px;
     cursor: pointer;
     color:white;
+}
+.menu {
+    display: inline;
+    font-size: 1.8rem;
+    margin: -4px 0 0 92%;
+    color: #fff;
+    cursor: pointer;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+.menu-bar {
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 40%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    position: absolute;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu-bar.open {
+    height: 28%;
+}
+
+.menu-bar a {
+    display: block;
+    padding: 6px 20px;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+}
+
+.menu-bar a:hover {
+    color: blue;
+    font-size: 18px;
 }
  /* End Header CSS */
 
@@ -42,6 +84,7 @@ header img{
     text-decoration: none;
     font-weight: 400;
     margin: 20px 20px;
+    display: none;
 }
 .navigation a::after{
     content: '';
@@ -70,7 +113,7 @@ header img{
  /* start Pages heading CSS*/
 .heading {
     position: relative;
-    font-size:2.5rem;
+    font-size:2rem;
     color: rgb(32, 32, 32);
     font-weight: 400;
     text-align: center;
@@ -80,8 +123,8 @@ header img{
 }
 .heading i {
     position: absolute;
-    margin:-7px 0 0 -70px;
-    font-size: 4rem;
+    margin:-2px 0 0 -50px;
+    font-size: 3rem;
     border-radius: 200px;
     overflow: hidden;
 }
@@ -92,21 +135,16 @@ header img{
 .hero {
     position: relative;
     background-image: url('image/360_F_455501849_lQxaVzf6FsxtfMEFvWHrYfJRQ1AfthOn.jpg');
+    padding: 490px 0 150px 0;
     background-size: cover;
     background-position: left;
     text-align: left;
-    padding: 490px 0 150px 0;
-}
-.hero img{
-    position: absolute;
-    margin: -21% 2% 0 82%;
-    width: 9rem;
-    height: auto;
+    padding: 530px 0 65px 0;
+    display: none;
 }
 .hero p {
     position: relative;
-    margin: 0 3% 0 36%;
-    flex: 1 1 45rem;
+    margin: 0 2% 0 30%;
     font-size: 37px;
     font-weight:600;
     color: rgb(255, 145, 0);
@@ -120,6 +158,41 @@ header img{
     font-family:Lucida Calligraphy;
     text-transform: capitalize;
     font-size: 37px;
+    font-weight:600;
+}
+.hero-mo {
+    display: block;
+    position: relative;
+    background-image: url('image/HD-wallpaper-india-flag-indian-flag-tricolor.jpg');
+    background-size: cover;
+    background-position: left;
+    text-align: left;
+    padding: 535px 0 60px 0;
+}
+.hero-mo p {
+    position: relative;
+    margin: 0 2% 0 30%;
+    font-size: 22px;
+    font-weight:600;
+    color: rgb(255, 145, 0);
+    text-shadow: 1px 1px 1px #000000;
+    font-family:Lucida Calligraphy;
+    text-transform: capitalize;
+}
+.hero-mo p .spa{
+    color:rgb(0, 179, 0);
+    text-shadow: 1px 1px 1px #000000;
+    font-family:Lucida Calligraphy;
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight:600;
+}
+.hero-mo p .spa1{
+    color: white;
+    text-shadow: 1px 1px 1px #000000;
+    font-family:Lucida Calligraphy;
+    text-transform: capitalize;
+    font-size: 22px;
     font-weight:600;
 }
 .dark{
@@ -242,6 +315,9 @@ header img{
 
 
  /* Start Winners Pichers section CSS */
+.pic-heading{
+    display: none;
+}
 .wrapper {
     width: 100%;
     margin: 20px 0 100px 0;
@@ -708,6 +784,16 @@ form .button-area {
 /* CSS End for Pre-loader */
 
 @media screen and (min-width: 700px){
+
+    .hero-mo{
+        display: none;
+    }
+    .hero {
+        display: block;
+    }
+    .pic-heading{
+        display: block;
+    }
     .contact{
         align-items: center;
     }
@@ -717,7 +803,7 @@ form .button-area {
     .contact .container1 {
         max-width: 1050px;
         width: 100%;
-        margin: 2rem 15rem;
+        margin: 2rem 15.5%;
     }
     .contact .content form {
         width: 45%;
@@ -729,5 +815,44 @@ form .button-area {
     .image img {
         width: 22rem;
         margin-left: -0px;
+    }
+    .navigation a{
+        display: inline;;
+    }
+    header img{
+        margin-left: 1rem;
+        height: 50px;
+        width: 50px;
+    }
+    .heading {
+        font-size:2.5rem;
+    }
+    .heading i {
+        font-size: 4rem;
+        margin:-7px 0 0 -70px;
+    }
+    body{
+        font-size: 100%;
+    }
+    .menu{
+        display: inline;
+        align-items: right;
+        font-size: 2rem;
+        margin: 20px 20px;
+    }
+    .menu{
+        display:none;
+    }
+    .menu-bar{
+        display: none;
+    }
+    .hero p {
+        margin: 0 3% 0 36%;
+    }
+}
+@media screen and (min-width: 576px){
+    .menu-bar{
+        left: 2rem;
+        width: unset;
     }
 }
