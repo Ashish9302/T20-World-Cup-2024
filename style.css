@@ -23,7 +23,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 99;
+    z-index: 9999;
 }
 
 header img{
@@ -43,28 +43,37 @@ header img{
 }
 
 .menu-bar {
-    right: 2rem;
-    top: 60px;
-    height: 0;
-    width: 40%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
+    border-radius: 10px;
     overflow: hidden;
-    position: absolute;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.4s;
+    transform: translateY(-200%);
+    z-index: 999;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .menu-bar.open {
-    height: 28%;
+    transform: translateY(0%);
 }
 
 .menu-bar a {
     display: block;
     padding: 6px 20px;
-    color: #000000;
+    color: rgb(247, 238, 220);
     text-decoration: none;
     text-align: center;
     font-size: 17px;
+    transition: transform 0.2s;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .menu-bar a:hover {
@@ -106,6 +115,7 @@ header img{
 .bgColor{
     transition: all 1s;
     background-color:#162938;
+    color: rgb(247, 238, 220);
 }
  /* End Navigation CSS in header */
 
@@ -849,8 +859,6 @@ form .button-area {
     .hero p {
         margin: 0 3% 0 36%;
     }
-}
-@media screen and (min-width: 576px){
     .menu-bar{
         left: 2rem;
         width: unset;
