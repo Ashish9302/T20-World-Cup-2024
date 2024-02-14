@@ -52,7 +52,7 @@ header img{
     backdrop-filter: blur(20px);
     border-radius: 5px;
     overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: transform 0.5s;
     transform: translateY(-100%);
     z-index: 99;
