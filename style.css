@@ -12,6 +12,7 @@ body{
     overflow: hidden;
     max-width: 100%;
     font-size: 80%;
+    background-color: #d3dff8;
 }
  /* Start Header CSS */
 header{
@@ -106,7 +107,7 @@ header img{
     background: #fff;
     border-radius: 3px;
     transform: scaleX(0);
-    transition: transform .5s;
+    transition: transform 0.5s;
     transform-origin: right;
 }
 .navigation a:hover::after{
@@ -196,13 +197,14 @@ header img{
 
  /* Start About Section CSS */
 .about {
-    background: rgb(194, 221, 230);
+    background: #d3dff8;
 }
 .row {
     display: flex;
     flex-direction: row;
     gap: 2rem;
     flex-wrap: wrap;
+    margin-left: 26px;
     padding: 12% 8% 20% 8%;
     margin-top: -7rem;
     margin-bottom: -3rem;
@@ -253,6 +255,9 @@ header img{
 .winner-container {
     display: flex;
     flex-wrap: wrap;
+}
+.mo-winner{
+    margin-left: 14px;
 }
 
 .winner {
@@ -441,6 +446,7 @@ input:checked + label .description {
     align-items: center;
     margin: 0 auto; 
     text-align: center;
+    margin-left: 28px;
 }
 .contact .container1 {
     max-width: 1050px;
@@ -827,6 +833,7 @@ form .button-area {
     }
     body{
         font-size: 100%;
+        background-color: white;
     }
     .menu{
         display: inline;
@@ -846,6 +853,15 @@ form .button-area {
     .menu-bar{
         left: 2rem;
         width: unset;
+    }
+    .contact {
+        margin-left: 0px;
+    }
+    .row {
+        margin-left: 0;
+    }
+    .mo-winner{
+        margin-left: 0;
     }
 }
 /* CSS end for media Quary */
